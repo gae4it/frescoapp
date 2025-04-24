@@ -1,0 +1,267 @@
+FRUTTA:
+
+Mele (Kanzi, Granny Smith, Royal Gala, Fuji, Golden Delicious)
+
+
+Pere (Abate, Carmen, Guyot, Santa Maria, William, Kaiser, Decana)
+
+
+Uva (da tavola, Vittoria, Italia, Red Globe, Uva spina, Uva fragola)
+
+
+Pesche (nettarine, tabacchiera, percoche, pesche gialle, pesche bianche)
+
+
+Kiwi (verde, gold)
+
+
+Banane (Cavendish, plantain, banane rosse)
+
+
+Angurie (crimson sweet, sugar baby, moon and stars)
+
+
+Frutti rossi (mirtilli, fragole, lamponi, ribes, more, ribes rosso, ribes nero)
+
+
+Albicocche (Bella d'Italia, Precoce di Treviglio, Valleggia)
+
+
+Susine (Santa Rosa, Angelino, President)
+
+
+Ciliegie (Durone, Ferrovia, Bigarreau)
+
+
+Meloni (cantalupo, retato, invernale)
+
+
+Fichi (Dottato, Nero di Sicilia, Verde di Calabria)
+
+
+Arance (da tavola, da spremere, Navel, Tarocco, Valencia)
+
+
+Mandarini (Clementine, Satsuma, Tangerine)
+
+
+Limoni (Femminello, Meyer, Eureka)
+
+
+Pompelmi (rosa, bianco, rosso)
+
+
+Fragole (Fresca, Alba, Belrubi)
+
+
+Ananas (Golden, Smooth Cayenne, Queen)
+
+
+Mango (Alphonso, Tommy Atkins, Kent)
+
+
+Papaya (Hawaiian, Mexican, Caribbean)
+
+
+Avocado (Hass, Fuerte, Bacon)
+
+
+Melagrane (Wonderful, Acco, Granada)
+
+
+Cocomeri (Charleston Gray, Crimson Sweet, Sugar Baby)
+
+
+Frutto della passione (giallo, viola)
+
+
+Litchi (Mauritius, Brewster)
+
+
+Lime (Persiano, Key lime)
+
+
+Agrumi (arancia, limone, pompelmo, mandarino)
+
+
+Frutta a nocciolo (pesche, albicocche, susine, ciliegie)
+
+
+VERDURA:
+
+Carciofi (Romanesco, Spinoso, Violetto)
+
+
+Asparagi (verdi, bianchi, viola)
+
+
+Zucca (Butternut, Hokkaido, Spaghetti)
+
+
+Batata (rossa, bianca, viola)
+
+
+Carciofo romanesco
+
+
+Cipolla di Medicina
+
+
+Pomodori (Pomodoro San Marzano, Pixel, Ciliegino, Cuore di Bue)
+
+
+Radicchio Rosso di Asigliano
+
+
+Aglio di Voghiera
+
+
+Patate (novelle, a pasta gialla, a pasta bianca)
+
+
+Zucchine (verdi, gialle, trombetta)
+
+
+Insalata (lattuga, rucola, radicchio, iceberg, romana)
+
+
+Legumi (fagioli, lenticchie, ceci, piselli, fave)
+
+
+Peperoni (rossi, gialli, verdi, arancioni)
+
+
+Melanzane (lunghe, tonde, violette)
+
+
+Fave (fresche, secche)
+
+
+Cavolfiori (bianchi, verdi, viola)
+
+
+Broccoli (verdi, viola, romanesco)
+
+
+Spinaci (freschi, surgelati)
+
+
+Carote (arancioni, gialle, viola)
+
+
+Barbabietole (rosse, gialle, bianche)
+
+
+Cavoli (verza, cavolo cappuccio, cavolo nero)
+
+
+Bietola (coste, erbette)
+
+
+Borragine
+
+
+Cavolini di Bruxelles
+
+
+Cardo
+
+
+ALIMENTARI:
+
+Pasta (spaghetti, penne, fusilli, lasagne, farfalle)
+
+
+Riso (Arborio, Carnaroli, Basmati, Jasmine)
+
+
+Olio d’oliva (extra vergine, vergine, lampante)
+
+
+Aceto balsamico (tradizionale, condimento)
+
+
+Salse (pomodoro, pesto, maionese, ketchup)
+
+
+Legumi (fagioli, lenticchie, ceci, piselli, fave)
+
+
+Pane e Alternative (pane bianco, integrale, grissini, taralli, cracker)
+
+
+Biscotti (per la colazione, pasticcini, frollini, secchi)
+
+
+Formaggi (Parmigiano, Gorgonzola, Mozzarella, Cheddar)
+
+
+Yogurt (bianco, alla frutta, greco)
+
+
+Burro (salato, non salato, chiarificato)
+
+
+Salumi e affettati (prosciutto, salame, bresaola, mortadella)
+
+
+BEVANDE:
+
+Acqua minerale (naturale, frizzante, leggermente frizzante)
+
+
+Bibite (Coca Cola, Fanta, Sprite, Pepsi)
+
+
+Succhi di frutta (arancia, mela, ananas, multifrutta)
+
+
+Caffè (espresso, americano, decaffeinato)
+
+
+Tè (nero, verde, bianco, rosso)
+
+
+Vino (rosso, bianco, rosé, spumante)
+
+
+Birra (chiara, scura, rossa, artigianale)
+
+
+Liquori (Amari, Grappa, Limoncello, Sambuca)
+
+
+Distillati (Gin, Vodka, Whisky, Rum)
+
+
+PRODOTTI PER LA CASA:
+
+Detersivi per piatti (liquidi, in polvere, in pastiglie)
+
+
+Detersivi per bucato (liquidi, in polvere, in capsule)
+
+
+Pulitori multiuso (spray, liquidi, in pastiglie)
+
+
+Prodotti per la pulizia del bagno (detergenti, disinfettanti, anticalcare)
+
+
+Prodotti per la pulizia della cucina (detergenti, sgrassatori, disinfettanti)
+
+
+Prodotti per la pulizia dei vetri (spray, liquidi)
+
+
+Deodoranti per ambienti (spray, diffusori, bastoncini)
+
+
+Sacchetti per la spazzatura (grandi, medi, piccoli)
+
+
+Carta igienica (doppia velina, tripla velina, extra morbida)
+
+
+Rotoli di carta da cucina (monostrato, multistrato, extra assorbenti)
+

@@ -1,0 +1,181 @@
+# Prompt per Replit AI: App Lista della Spesa in React
+
+## Descrizione generale
+Crea un'applicazione React completa per un negozio di alimentari italiano. L'app deve funzionare come un e-commerce per creare liste della spesa (senza pagamento) con interfaccia simile alle bilance digitali dei supermercati. L'obiettivo è permettere ai clienti di selezionare prodotti e inviarli al negozio come lista della spesa via email.
+
+## Struttura dell'applicazione
+Implementa una Single Page Application (SPA) React con routing e le seguenti caratteristiche:
+
+### Architettura
+- Utilizza React Router per la navigazione
+- Implementa Redux o Context API per la gestione dello stato
+- Crea componenti riutilizzabili per prodotti, carrello e categorie
+- Design responsive mobile-first con CSS-in-JS (styled-components o Emotion)
+- Implementa la validazione del form prima dell'invio dell'ordine
+
+### Struttura della navigazione
+1. **Home Page**: Mostra le 4 macro-categorie principali con icone grandi e distintive
+2. **Pagine Categoria**: Una pagina dedicata per ciascuna macro-categoria che mostra tutti i prodotti di quella categoria
+3. **Pagina dettaglio prodotto**: Con selettore di varianti e quantità
+4. **Pagina Carrello**: Riepilogo della lista della spesa con possibilità di modificare le quantità
+5. **Pagina Checkout**: Form per i dati del cliente e invio dell'ordine via email
+
+## Categorie e Prodotti
+
+### 1. Frutta
+Crea una pagina dedicata con icone per ciascun prodotto:
+- Mele (varietà: Royal Gala, Golden Delicious, Granny Smith, Fuji, Kanzi, Pink Lady)
+- Pere (varietà: Williams, Abate, Kaiser, Conference)
+- Arance (varietà: Tarocco, Navel, Valencia)
+- Pesche (varietà: Gialle, Bianche, Nettarine)
+- Kiwi (varietà: Verde, Gold)
+- Banane
+- Uva (varietà: Italia, Nera, Regina, Vittoria)
+- Fragole
+- Limoni
+- Meloni (varietà: Retato, Liscio, Giallo)
+- Angurie
+- Ciliegie
+- Albicocche
+- Susine (varietà: Gialle, Rosse, Nere)
+
+### 2. Verdura
+Crea una pagina dedicata con icone per ciascun prodotto:
+- Insalata (varietà: Lattuga, Iceberg, Romana, Rucola, Radicchio)
+- Pomodori (varietà: Datterini, Ciliegino, Cuore di Bue, San Marzano, Roma)
+- Zucchine
+- Melanzane
+- Peperoni (varietà: Rossi, Gialli, Verdi)
+- Carote
+- Patate (varietà: Gialle, Rosse, Novelle)
+- Cipolle (varietà: Bianche, Rosse, Dorate)
+- Aglio
+- Broccoli
+- Cavolfiori
+- Spinaci
+- Funghi (varietà: Champignon, Porcini, Prataioli)
+- Cetrioli
+- Finocchi
+
+### 3. Alimentari
+Suddividi in sotto-categorie con icone appropriate:
+
+**Formaggi**
+- Mozzarella (varietà: Fior di latte, Bufala, Nodini)
+- Parmigiano Reggiano (stagionature: 12, 24, 36 mesi)
+- Grana Padano
+- Ricotta (varietà: Mucca, Pecora)
+- Stracchino
+- Gorgonzola (varietà: Dolce, Piccante)
+- Pecorino (varietà: Romano, Toscano, Sardo)
+- Scamorza (varietà: Bianca, Affumicata)
+
+**Salumi**
+- Prosciutto Crudo (varietà: Parma, San Daniele, Toscano)
+- Prosciutto Cotto (varietà: Standard, Alta Qualità)
+- Mortadella
+- Salame (varietà: Milano, Napoli, Ungherese)
+- Bresaola
+- Pancetta
+- Speck
+- Coppa
+
+**Pasta**
+- Pasta Secca (formati: Spaghetti, Penne, Fusilli, Rigatoni, Farfalle)
+- Pasta All'uovo (varietà: Tagliatelle, Fettuccine, Pappardelle)
+- Pasta Ripiena (varietà: Tortellini, Ravioli, Agnolotti)
+- Gnocchi
+
+**Olio e Aceto**
+- Olio d'Oliva (varietà: Extra Vergine, Vergine, formati: 0.5L, 0.75L, 1L, 5L)
+- Olio di Semi (varietà: Girasole, Mais, formati: 1L, 2L)
+- Aceto (varietà: Vino, Balsamico, Mele, formati: 0.5L, 1L)
+
+**Conserve**
+- Pelati
+- Passata di Pomodoro
+- Legumi in Scatola (varietà: Fagioli, Ceci, Lenticchie)
+- Tonno in Scatola
+- Olive
+- Sottaceti
+
+**Bevande**
+- Vino (tipologie: Rosso, Bianco, Rosato, formati: 0.75L, 1.5L)
+- Acqua (varietà: Naturale, Frizzante, formati: 0.5L, 1.5L, 6L)
+- Birra (varietà: Chiara, Scura, Artigianale, formati: 0.33L, 0.66L)
+- Succhi di Frutta (gusti: Arancia, Pesca, ACE, Mirtillo)
+
+### 4. Prodotti per la Casa
+Suddividi in sotto-categorie con icone appropriate:
+
+**Pulizia**
+- Detersivo Piatti (varietà: Classico, Limone, formati: 0.5L, 1L)
+- Detersivo Lavatrice (varietà: Liquido, Polvere, Capsule, formati: 1L, 2L, 30pz)
+- Ammorbidente (formati: 0.75L, 1.5L)
+- Detersivo Pavimenti (fragranze: Lavanda, Limone, formati: 1L, 2L)
+- Candeggina (formati: 1L, 2L)
+- Sgrassatore (formati: 0.5L, 0.75L)
+
+**Igiene Personale**
+- Sapone Mani (varietà: Classico, Antibatterico, formati: 300ml, 500ml)
+- Bagnoschiuma (varietà: Neutro, Nutriente, formati: 250ml, 500ml)
+- Shampoo (tipologie: Normali, Secchi, Grassi, formati: 250ml, 500ml)
+- Dentifricio (varietà: Classico, Sbiancante, formati: 75ml, 100ml)
+- Carta Igienica (confezioni: 4 rotoli, 8 rotoli, 12 rotoli)
+
+**Accessori**
+- Spugne per Piatti (confezioni: 3pz, 5pz)
+- Sacchetti Spazzatura (misure: Piccoli, Medi, Grandi)
+- Pellicola/Alluminio (misure: Standard, Extra-lungo)
+- Carta da Forno
+- Fazzoletti (confezioni: 10pz, 20pz)
+- Carta Casa (confezioni: 2 rotoli, 4 rotoli)
+
+## Funzionalità Specifiche
+
+### Selezione Prodotti
+- Per prodotti a peso (frutta e verdura):
+  - Implementa un selettore con incrementi di 0.25kg (0.25, 0.50, 0.75, 1.0, 1.25, ...)
+  - Range: da 0.25kg a 10kg
+  - Permetti input sia tramite pulsanti +/- che inserimento diretto del valore
+  
+- Per prodotti a unità (alimentari e casa):
+  - Implementa un contatore numerico con incrementi di 1
+  - Range: da 1 a 100 unità
+  - Permetti input sia tramite pulsanti +/- che inserimento diretto del valore
+
+### Carrello/Lista della Spesa
+- Bottone "Aggiungi alla Lista della Spesa" (non "Aggiungi al Carrello" o "Acquista")
+- Visualizzazione del totale degli articoli nel carrello come badge nella navbar
+- Pagina dedicata con elenco dei prodotti selezionati, raggruppati per categoria
+- Possibilità di modificare le quantità direttamente dalla lista
+- Pulsante per svuotare la lista
+- Pulsante "Invia Ordine" per completare il processo
+
+### Invio Ordine
+- Form di contatto per il cliente (Nome, Email, Telefono, Indirizzo, Note)
+- Implementa invio email al negozio con la lista della spesa formattata
+- Visualizza una pagina di conferma dopo l'invio riuscito
+
+## UI/UX
+- Design pulito e minimalista
+- Palette di colori ispirata a prodotti freschi (verdi, rossi, arancioni)
+- Icone grandi e chiare per ciascun prodotto, simili a quelle delle bilance dei supermercati
+- Interfaccia touch-friendly per utilizzo su tablet/mobile
+- Animazioni fluide per le transizioni tra pagine
+- Layout responsive che si adatta a dispositivi desktop, tablet e mobile
+- Modalità chiara/scura selezionabile dall'utente
+
+## Componenti Tecnici
+- Implementa lazy loading per ottimizzare i tempi di caricamento
+- Utilizza React Hooks (useState, useEffect, useContext, useReducer)
+- Aggiungi persistenza locale del carrello con localStorage
+- Implementa gestione degli errori e feedback visivi per l'utente
+- Includi funzionalità di ricerca prodotti nella navbar
+
+## Note Importanti
+- Non implementare funzionalità di pagamento
+- Non mostrare prezzi per i prodotti
+- Concentrati su un'esperienza utente fluida e intuitiva
+- Usa immagini/icone rappresentative per ogni prodotto
+- Assicurati che l'app sia completamente funzionale anche senza backend (può funzionare interamente frontend)
