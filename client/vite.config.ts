@@ -4,11 +4,8 @@ import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path from "path";
 
 export default defineConfig({
-  base: '/shoppinglistmanager/',
-  plugins: [
-    react(),
-    themePlugin()
-  ],
+  base: "/shoppinglistmanager/",
+  plugins: [react(), themePlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),

@@ -18,10 +18,10 @@ export default function ProductCard({ product, category }: ProductCardProps) {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <Link href={`/product/${category}/${product.id}`}>
-          <Button className="w-full">
-            Seleziona
-          </Button>
+        <Link
+          href={`${import.meta.env.BASE_URL}product/${category}/${product.id}`}
+        >
+          <Button className="w-full">Seleziona</Button>
         </Link>
       </CardContent>
     </Card>

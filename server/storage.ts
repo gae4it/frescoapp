@@ -4,7 +4,7 @@ import { z } from "zod";
 export type IStorage = {
   createOrder(order: z.infer<typeof insertOrderSchema>): Promise<Order>;
   getOrders(): Promise<Order[]>;
-}
+};
 
 export class MemStorage implements IStorage {
   private users: Map<number, User>;
@@ -25,7 +25,7 @@ export class MemStorage implements IStorage {
 
   async getUserByUsername(username: string): Promise<User | undefined> {
     return Array.from(this.users.values()).find(
-      (user) => user.username === username,
+      (user) => user.username === username
     );
   }
 
@@ -38,10 +38,10 @@ export class MemStorage implements IStorage {
 
   async createOrder(insertOrder: InsertOrder): Promise<Order> {
     const id = this.currentOrderId++;
-    const order: Order = { 
-      ...insertOrder, 
-      id, 
-      createdAt: new Date() 
+    const order: Order = {
+      ...insertOrder,
+      id,
+      createdAt: new Date(),
     };
     this.orders.set(id, order);
     return order;

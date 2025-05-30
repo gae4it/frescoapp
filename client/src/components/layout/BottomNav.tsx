@@ -21,27 +21,33 @@ export default function BottomNav() {
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-primary text-primary-foreground p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/">
+        {" "}
+        <Link href={`${base}`}>
           <Button variant="ghost" size="icon" className="text-white">
             <Home className="h-10 w-10" />
           </Button>
         </Link>
-
-        <Button variant="ghost" size="icon" onClick={goBack} className="text-white">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={goBack}
+          className="text-white"
+        >
           <ArrowLeft className="h-10 w-10" />
         </Button>
-
-        <Button variant="ghost" size="icon" onClick={goForward} className="text-white">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={goForward}
+          className="text-white"
+        >
           <ArrowRight className="h-10 w-10" />
         </Button>
-
-        <Link href="/cart">
+        <Link href={`${base}cart`}>
           <Button variant="ghost" size="icon" className="relative text-white">
             <ShoppingBasket className="h-10 w-10" />
             {itemCount > 0 && (
-              <Badge className="absolute -top-2 -right-2">
-                {itemCount}
-              </Badge>
+              <Badge className="absolute -top-2 -right-2">{itemCount}</Badge>
             )}
           </Button>
         </Link>
