@@ -1,1 +1,1 @@
-# shoppinglistmanager
+# Shopping List Manager
