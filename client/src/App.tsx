@@ -13,8 +13,9 @@ import CheckoutPage from "./pages/CheckoutPage";
 import NotFound from "./pages/not-found";
 
 function Router() {
+  const base = import.meta.env.BASE_URL;
   return (
-    <Switch>
+    <Switch base={base}>
       <Route path="/" component={HomePage} />
       <Route path="/category/:category" component={CategoryPage} />
       <Route path="/product/:category/:id" component={ProductPage} />

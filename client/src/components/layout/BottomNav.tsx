@@ -8,6 +8,7 @@ export default function BottomNav() {
   const [location, setLocation] = useLocation();
   const { state } = useCart();
   const itemCount = state.items.length;
+  const base = import.meta.env.BASE_URL;
 
   const goBack = () => {
     window.history.back();
