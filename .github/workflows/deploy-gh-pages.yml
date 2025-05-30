@@ -42,12 +42,10 @@ jobs:
           VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://api-url-here' }}
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
+        uses: actions/configure-pages@v4      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './client/dist'
+          path: './dist'
 
   deploy:
     environment:
