@@ -15,11 +15,11 @@ import NotFound from "./pages/not-found";
 function Router() {
   const base = import.meta.env.BASE_URL;
   return (
-    <Switch base={base}>
-      <Route path="/" component={HomePage} />
-      <Route path="/category/:category" component={CategoryPage} />
-      <Route path="/product/:category/:id" component={ProductPage} />
-      <Route path="/cart" component={CartPage} />
+    <Switch>
+      <Route path={`${base}`} component={HomePage} />
+      <Route path={`${base}category/:category`} component={CategoryPage} />
+      <Route path={`${base}product/:category/:id`} component={ProductPage} />
+      <Route path={`${base}cart`} component={CartPage} />
       <Route path="/checkout" component={CheckoutPage} />
       <Route component={NotFound} />
     </Switch>

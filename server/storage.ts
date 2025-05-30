@@ -1,23 +1,8 @@
-import { users, type User, type InsertUser } from "@shared/schema";
+import { orders, type Order, insertOrderSchema } from "@shared/schema";
+import { z } from "zod";
 
-// Define Order types (add these to your shared schema if needed)
-export interface Order {
-  id: number;
-  email: string;
-  items: string[];
-  createdAt: Date;
-}
-
-export interface InsertOrder {
-  email: string;
-  items: string[];
-}
-
-export interface IStorage {
-  getUser(id: number): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
-  createOrder(order: InsertOrder): Promise<Order>;
+export type IStorage = {
+  createOrder(order: z.infer<typeof insertOrderSchema>): Promise<Order>;
   getOrders(): Promise<Order[]>;
 }
 
