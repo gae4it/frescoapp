@@ -28,11 +28,13 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install      - name: Build
+        run: npm install
+
+      - name: Build
         run: npm run build
         env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://api-url-here' }}
           NODE_ENV: production
+          VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://api-url-here' }}
 
       - name: Fix permissions
         run: |
