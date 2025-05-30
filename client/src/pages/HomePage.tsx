@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { categories } from "@/data/products";
 import { Link } from "wouter";
-
+  
 export default function HomePage() {
   return (
     <div className="space-y-8">
