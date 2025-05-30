@@ -25,13 +25,11 @@ jobs:
     - name: Type check
       run: npm run type-check
 
-    - name: Build client
+    - name: Build
       run: npm run build
-      working-directory: ./client
-
-    - name: Build server
-      run: npm run build
-      working-directory: ./server
 
     - name: Run tests
-      run: npm test || echo "No tests configured"
+      run: npm test || echo "No tests configured yet"
+
+    env:
+      CI: true
