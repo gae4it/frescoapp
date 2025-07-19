@@ -18,8 +18,17 @@ export class MemStorage implements IStorage {
   async createOrder(insertOrder: InsertOrder): Promise<Order> {
     const id = this.currentOrderId++;
     const order: Order = {
-      ...insertOrder,
       id,
+      customerName: insertOrder.customerName,
+      customerEmail: insertOrder.customerEmail,
+      customerPhone: insertOrder.customerPhone,
+      customerAddress: insertOrder.customerAddress,
+      customerNumber: insertOrder.customerNumber,
+      items: insertOrder.items,
+      // Convert undefined to null for nullable fields
+      notes: insertOrder.notes ?? null,
+      customerIntercom: insertOrder.customerIntercom ?? null,
+      deliveryInstructions: insertOrder.deliveryInstructions ?? null
     };
     this.orders.set(id, order);
     return order;
