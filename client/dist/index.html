@@ -58,10 +58,12 @@
     <!-- Hidden forms for Netlify Forms to detect -->
     <!-- Store notification form -->
     <form name="order-notification" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="order-id" />
       <input type="text" name="customer-name" />
       <input type="email" name="customer-email" />
       <input type="text" name="customer-phone" />
       <input type="text" name="customer-address" />
+      <input type="text" name="customer-intercom" />
       <textarea name="order-details"></textarea>
       <input type="text" name="total-amount" />
       <textarea name="delivery-instructions"></textarea>
@@ -77,6 +79,6 @@
       <input type="text" name="total-amount" />
       <input type="text" name="delivery-address" />
     </form>
-    
+    
   </body>
 </html>
