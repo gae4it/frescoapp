@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
+  root: "client", // Set the root to the client directory
   base: "/shoppinglistmanager/",
   plugins: [
     react(),
