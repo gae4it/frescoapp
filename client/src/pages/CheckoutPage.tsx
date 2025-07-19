@@ -33,7 +33,22 @@ export default function CheckoutPage() {
 
   const onSubmit = async (data: any) => {
     try {
-      const response = await apiRequest("POST", "/api/orders", data);
+      // Use Netlify function instead of server API
+      const response = await fetch('/.netlify/functions/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to submit order');
+      }
+
+      const result = await response.json();
+      console.log('Order submitted successfully:', result);
       
       // Clear cart first
       dispatch({ type: "CLEAR_CART" });
@@ -42,10 +57,11 @@ export default function CheckoutPage() {
       setLocation("/order-confirmation");
       
     } catch (error) {
+      console.error('Order submission error:', error);
       toast({
         variant: "destructive",
         title: "Errore",
-        description: "Si è verificato un errore durante l'invio dell'ordine"
+        description: error instanceof Error ? error.message : "Si è verificato un errore durante l'invio dell'ordine"
       });
     }
   };
