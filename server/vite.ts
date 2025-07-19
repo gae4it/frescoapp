@@ -31,7 +31,7 @@ export async function setupVite(app: Express, server: Server) {
 
   const vite = await createViteServer({
     ...viteConfig,
-    configFile: false,
+    configFile: false,git push origin frescoapp-formgit push origin frescoapp-formgit push origin frescoapp-form
     customLogger: {
       ...viteLogger,
       error: (msg, options) => {
