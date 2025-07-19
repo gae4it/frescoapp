@@ -1,1 +1,1 @@
-# Shopping List Manager
+# Fresco App
