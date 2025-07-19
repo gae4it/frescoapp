@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   root: "client", // Set the root to the client directory
-  base: "/shoppinglistmanager/",
+  base: "/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
