@@ -126,8 +126,27 @@ export const handler: Handler = async (event, context) => {
       // Store order
       orders.push(order);
       
-      // Send email notification
-      const emailSent = await sendOrderEmail(validatedData);
+      // Send email notification using FormSubmit service
+      let emailSent = false;
+      try {
+        const emailResponse = await fetch('/.netlify/functions/send-email-resend', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ orderData: validatedData })
+        });
+        
+        if (emailResponse.ok) {
+          const emailResult = await emailResponse.json();
+          emailSent = emailResult.success;
+          console.log('Email function response:', emailResult);
+        }
+      } catch (error) {
+        console.log('Email function call failed:', error);
+        // Fallback to Netlify Forms method
+        emailSent = await sendOrderEmail(validatedData);
+      }
       
       console.log(`Order created: ${JSON.stringify(order)}`);
       console.log(`Email sent: ${emailSent}`);
