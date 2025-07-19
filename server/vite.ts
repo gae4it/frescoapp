@@ -26,12 +26,12 @@ export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
-    allowedHosts: true, // Set to true instead of boolean true for correct type
+    allowedHosts: undefined, // oppure true o string[] se necessario
   };
 
   const vite = await createViteServer({
     ...viteConfig,
-    configFile: false,git push origin frescoapp-formgit push origin frescoapp-formgit push origin frescoapp-form
+    configFile: false,
     customLogger: {
       ...viteLogger,
       error: (msg, options) => {
@@ -42,7 +42,6 @@ export async function setupVite(app: Express, server: Server) {
     server: serverOptions,
     appType: "custom",
   });
-
   app.use(vite.middlewares);
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
