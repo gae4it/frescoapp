@@ -31,7 +31,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, "dist"),
+    outDir: path.resolve(__dirname, "client", "dist"), // Output to client/dist
     emptyOutDir: true,
   },
 });
