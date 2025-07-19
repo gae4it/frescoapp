@@ -19,7 +19,9 @@ export default function Navbar() {
             <a className="relative">
               <ShoppingBasket size={24} />
               {itemCount > 0 && (
-                <Badge className="absolute -top-2 -right-2">{itemCount}</Badge>
+                <Badge className="absolute -top-2 -right-2 border border-white">
+                  {itemCount}
+                </Badge>
               )}
             </a>
           </Link>
