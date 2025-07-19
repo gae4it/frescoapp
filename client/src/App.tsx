@@ -10,6 +10,7 @@ import CategoryPage from "./pages/CategoryPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import OrderConfirmationPage from "./pages/OrderConfirmationPage";
 import NotFound from "./pages/not-found";
 
 function Router() {
@@ -21,6 +22,7 @@ function Router() {
       <Route path={`${base}product/:category/:id`} component={ProductPage} />
       <Route path={`${base}cart`} component={CartPage} />
       <Route path="/checkout" component={CheckoutPage} />
+      <Route path="/order-confirmation" component={OrderConfirmationPage} />
       <Route component={NotFound} />
     </Switch>
   );

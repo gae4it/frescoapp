@@ -33,15 +33,14 @@ export default function CheckoutPage() {
 
   const onSubmit = async (data: any) => {
     try {
-      await apiRequest("POST", "/api/orders", data);
+      const response = await apiRequest("POST", "/api/orders", data);
       
-      toast({
-        title: "Ordine inviato con successo",
-        description: "Riceverai una conferma via email"
-      });
-      
+      // Clear cart first
       dispatch({ type: "CLEAR_CART" });
-      setLocation("/");
+      
+      // Redirect to confirmation page
+      setLocation("/order-confirmation");
+      
     } catch (error) {
       toast({
         variant: "destructive",

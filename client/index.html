@@ -3,9 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Fresco App - Spesa Online</title>
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Hidden form for Netlify Forms to detect -->
+    <form name="order-notification" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="customer-name" />
+      <input type="email" name="customer-email" />
+      <input type="text" name="customer-phone" />
+      <input type="text" name="customer-address" />
+      <textarea name="order-details"></textarea>
+      <textarea name="delivery-instructions"></textarea>
+      <textarea name="notes"></textarea>
+    </form>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
