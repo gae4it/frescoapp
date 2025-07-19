@@ -126,10 +126,10 @@ export const handler: Handler = async (event, context) => {
       // Store order
       orders.push(order);
       
-      // Send email notification using webhook email service
+      // Send notification using Netlify Forms (most reliable)
       let emailSent = false;
       try {
-        const emailResponse = await fetch('/.netlify/functions/email-via-webhook', {
+        const emailResponse = await fetch('/.netlify/functions/send-netlify-form', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -140,11 +140,11 @@ export const handler: Handler = async (event, context) => {
         if (emailResponse.ok) {
           const emailResult = await emailResponse.json();
           emailSent = emailResult.success;
-          console.log('Webhook email function response:', emailResult);
+          console.log('✅ Netlify Forms notification sent:', emailResult);
         }
       } catch (error) {
-        console.log('Webhook email function call failed:', error);
-        // Fallback to Netlify Forms method
+        console.log('❌ Netlify Forms notification failed:', error);
+        // Direct fallback to Netlify Forms
         emailSent = await sendOrderEmail(validatedData);
       }
       
