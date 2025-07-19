@@ -99,28 +99,37 @@ Per produzione, considera di sostituire il MemStorage con:
 - MongoDB (Atlas)
 - Firebase Firestore
 
-## Test
+## Risoluzione Problemi
 
-Per testare localmente:
-```bash
-npm run dev
+### Problema: "Si è verificato un errore nell'invio dell'ordine"
+
+**Causa**: L'app deployata su Netlify non può usare le API routes del server Express perché Netlify serve solo file statici e funzioni serverless.
+
+**Soluzione Implementata**:
+1. Creata funzione Netlify `orders.ts` in `netlify/functions/`
+2. Aggiornato `CheckoutPage.tsx` per usare `/.netlify/functions/orders` invece di `/api/orders`
+3. Aggiunto logging completo per debug
+
+### Debug
+
+Per verificare che gli ordini vengano ricevuti:
+
+1. **Netlify Dashboard**: 
+   - Vai su https://app.netlify.com
+   - Seleziona il sito frescoapp
+   - Functions > orders > View logs
+
+2. **Test Locale**:
+   - Apri `test-order.html` nel browser
+   - Clicca "Test Order Submission"
+   - Controlla la console del browser
+
+### Logs da Controllare
+
+Nei log della funzione Netlify dovresti vedere:
 ```
-
-Per testare il build:
-```bash
-npm run build
-```
-
-Per deployare su Netlify:
-```bash
-git add .
-git commit -m "Implement order form with email notifications"
-git push origin frescoapp-form
-```
-
-## Messaggio di Conferma
-
-Il messaggio mostrato all'utente è:
-> "Abbiamo ricevuto il tuo ordine! Provvederemo alla sua preparazione al più presto. Grazie mille e una splendida giornata!"
-
-Questo corrisponde esattamente alla richiesta specificata.
+=== NEW ORDER EMAIL ===
+To: gae4it@gmail.com
+Subject: Nuovo ordine da [Nome Cliente]
+Customer Email: [email cliente]
+Content: [dettagli ordine]

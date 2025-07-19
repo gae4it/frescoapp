@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Order Function</title>
+</head>
+<body>
+    <h1>Test Order Function</h1>
+    <button onclick="testOrder()">Test Order Submission</button>
+    <div id="result"></div>
+
+    <script>
+        async function testOrder() {
+            const testData = {
+                customerName: "Mario Rossi",
+                customerEmail: "mario.rossi@example.com",
+                customerPhone: "1234567890",
+                customerAddress: "Via Roma 123",
+                customerNumber: "123",
+                customerIntercom: "Rossi",
+                deliveryInstructions: "Lasciare davanti alla porta",
+                notes: "Test order",
+                items: JSON.stringify([
+                    { name: "Pomodori", quantity: 2, price: "3.50" },
+                    { name: "Pane", quantity: 1, price: "1.20" }
+                ])
+            };
+
+            try {
+                console.log('Sending test order:', testData);
+                
+                const response = await fetch('/.netlify/functions/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+
+                const result = await response.json();
+                console.log('Response data:', result);
+
+                document.getElementById('result').innerHTML = `
+                    <h3>Response:</h3>
+                    <pre>${JSON.stringify(result, null, 2)}</pre>
+                    <p>Status: ${response.status}</p>
+                `;
+
+                if (response.ok) {
+                    alert('Order submitted successfully!');
+                } else {
+                    alert('Order submission failed: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = `
+                    <h3>Error:</h3>
+                    <pre>${error.message}</pre>
+                `;
+                alert('Error: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
