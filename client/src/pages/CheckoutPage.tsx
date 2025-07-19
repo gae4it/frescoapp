@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { apiRequest } from "@/lib/queryClient";
 import { useLocation } from "wouter";
+import emailjs from '@emailjs/browser';
 
 export default function CheckoutPage() {
   const { state, dispatch } = useCart();
